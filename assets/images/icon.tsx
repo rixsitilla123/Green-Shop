@@ -112,4 +112,62 @@ function PasswordShowIcon() {
 	)
 }
 
-export { Logo, SearchIcon, BasketIcon, LoginIcon, GoogleIcon, FacebookIcon, CloseModalIcon, PasswordHideIcon, PasswordShowIcon, }
+function ProductCardShopIcon() {
+	return (
+		<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<clipPath id="clip4_201">
+					<rect id="shopping 1" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fillOpacity="0" />
+				</clipPath>
+			</defs>
+			<rect id="shopping 1" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fillOpacity="0" />
+			<g clipPath="url(#clip4_201)">
+				<path id="Vector" d="M14.29 16.87L8.24 16.87C5.65 16.87 3.55 14.77 3.55 12.18L3.55 7.38C3.55 4.98 2.35 2.75 0.35 1.43C-0.01 1.19 -0.11 0.71 0.12 0.35C0.36 -0.01 0.85 -0.11 1.21 0.13C2.35 0.88 3.28 1.88 3.94 3.02C4.09 3.18 5.24 4.41 7.14 4.41L16.14 4.41C18.59 4.36 20.51 6.83 19.87 9.2L18.83 13.32C18.31 15.41 16.44 16.87 14.29 16.87ZM4.91 5.53C5.04 6.13 5.11 6.75 5.11 7.38L5.11 12.18C5.11 13.91 6.51 15.31 8.24 15.31L14.29 15.31C15.72 15.31 16.97 14.34 17.32 12.94L18.35 8.82C18.74 7.41 17.59 5.95 16.14 5.97L7.14 5.97C6.28 5.97 5.54 5.79 4.91 5.53ZM7.85 19.02C7.85 18.48 7.41 18.04 6.87 18.04C5.57 18.09 5.57 19.94 6.87 19.99C7.41 19.99 7.85 19.56 7.85 19.02ZM15.62 19.02C15.62 18.48 15.18 18.04 14.64 18.04C13.35 18.09 13.35 19.94 14.64 19.99C15.18 19.99 15.62 19.56 15.62 19.02ZM16.92 8.32C16.92 7.88 16.57 7.54 16.14 7.54L7.45 7.54C6.42 7.58 6.42 9.06 7.45 9.1L16.14 9.1C16.57 9.1 16.92 8.75 16.92 8.32Z" fill="currentColor" fillOpacity="1.000000" fillRule="nonzero" />
+			</g>
+		</svg>
+	)
+}
+
+function ProductCardLikeIcon() {
+	return (
+		<svg width="20.000031" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<clipPath id="clip4_209">
+					<rect id="heart 1" rx="0.000000" width="19.000038" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fillOpacity="0" />
+				</clipPath>
+			</defs>
+			<rect id="heart 1" rx="0.000000" width="19.000038" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fillOpacity="0" />
+			<g clipPath="url(#clip4_209)">
+				<path id="Vector" d="M10 18.88C9.71 18.88 9.44 18.78 9.22 18.59C8.41 17.89 7.63 17.22 6.95 16.64L6.94 16.63C4.93 14.92 3.19 13.43 1.98 11.97C0.63 10.34 0 8.79 0 7.1C0 5.46 0.56 3.94 1.58 2.83C2.62 1.71 4.04 1.09 5.58 1.09C6.74 1.09 7.79 1.45 8.72 2.17C9.19 2.54 9.62 2.98 10 3.5C10.37 2.98 10.8 2.54 11.27 2.17C12.2 1.45 13.25 1.09 14.41 1.09C15.95 1.09 17.37 1.71 18.41 2.83C19.43 3.94 20 5.46 20 7.1C20 8.79 19.36 10.34 18.01 11.97C16.8 13.43 15.06 14.92 13.05 16.63C12.36 17.22 11.58 17.88 10.77 18.59C10.55 18.78 10.28 18.88 10 18.88ZM5.58 2.26C4.37 2.26 3.25 2.74 2.44 3.62C1.62 4.52 1.17 5.75 1.17 7.1C1.17 8.52 1.7 9.79 2.88 11.22C4.03 12.61 5.73 14.06 7.7 15.74L7.71 15.74C8.4 16.33 9.18 17 9.99 17.71C10.81 17 11.6 16.33 12.29 15.74C14.26 14.06 15.96 12.61 17.11 11.22C18.29 9.79 18.82 8.52 18.82 7.1C18.82 5.75 18.37 4.52 17.55 3.62C16.74 2.74 15.62 2.26 14.41 2.26C13.52 2.26 12.7 2.54 11.98 3.1C11.34 3.6 10.89 4.23 10.63 4.66C10.5 4.89 10.26 5.03 10 5.03C9.73 5.03 9.49 4.89 9.36 4.66C9.1 4.23 8.65 3.6 8.01 3.1C7.29 2.54 6.47 2.26 5.58 2.26Z" fill="currentColor" fillOpacity="1.000000" fillRule="nonzero" />
+			</g>
+		</svg>
+	)
+}
+
+function ProductCardSearchIcon() {
+	return (
+		<svg width="20" height="20.000000" viewBox="0 0 19.9913 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<clipPath id="clip4_214">
+					<rect id="Frame" rx="0.000000" width="18.991261" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fillOpacity="0" />
+				</clipPath>
+			</defs>
+			<rect id="Frame" rx="0.000000" width="18.991261" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fillOpacity="0" />
+			<g clipPath="url(#clip4_214)">
+				<path id="Vector" d="M14.56 16C10.57 19.18 4.98 18.3 2.02 14.65C-0.83 11.12 -0.65 6.04 2.44 2.82C5.64 -0.51 10.68 -0.95 14.32 1.78C15.63 2.76 16.61 4 17.24 5.5C17.88 7.02 18.07 8.59 17.85 10.22C17.63 11.83 16.99 13.27 15.94 14.62C16.02 14.67 16.11 14.71 16.18 14.78C17.33 15.93 18.48 17.08 19.63 18.23C19.91 18.5 20.04 18.82 19.96 19.2C19.8 19.96 18.9 20.25 18.32 19.73C18.04 19.49 17.79 19.22 17.54 18.96C16.59 18.01 15.64 17.06 14.69 16.12C14.65 16.08 14.61 16.04 14.56 16ZM15.95 8.98C15.96 5.12 12.84 2 8.97 2C5.12 1.99 2 5.09 1.98 8.94C1.97 12.81 5.08 15.94 8.96 15.96C12.8 15.98 15.94 12.84 15.95 8.98Z" fill="currentColor" fillOpacity="1.000000" fillRule="nonzero" />
+			</g>
+		</svg>
+	)
+}
+
+function DownArrow() {
+	return (
+		<svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+			<defs />
+			<rect id="Iconly/Two-tone/Arrow - Down 2" rx="0.000000" width="15.000000" height="15.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fillOpacity="0" />
+			<path id="Stroke 1" d="M12.66 5.66L7.99 10.33L3.33 5.66" stroke="#3D3D3D" strokeOpacity="1.000000" strokeWidth="1.500000" strokeLinejoin="round" strokeLinecap="round" />
+		</svg>
+	)
+}
+
+export { Logo, SearchIcon, BasketIcon, LoginIcon, GoogleIcon, FacebookIcon, CloseModalIcon, PasswordHideIcon, PasswordShowIcon, ProductCardShopIcon, ProductCardLikeIcon, ProductCardSearchIcon, DownArrow, }
