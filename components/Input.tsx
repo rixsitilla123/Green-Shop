@@ -1,5 +1,5 @@
 "use client"
-import { PasswordHideIcon, PasswordShowIcon } from "@/assets/images/icon"
+import { PasswordHideIcon, PasswordShowIcon } from "@/assets/image/icon"
 import React, { useState } from "react"
 
 interface InputType {

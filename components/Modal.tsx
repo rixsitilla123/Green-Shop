@@ -1,5 +1,5 @@
 "use client"
-import { CloseModalIcon } from "@/assets/images/icon"
+import { CloseModalIcon } from "@/assets/image/icon"
 import React, {ReactNode, SetStateAction} from "react"
 
 interface ModalType {

@@ -1,6 +1,6 @@
 "use client"
 import React, { ReactNode, useContext } from "react"
-import { LoginIcon, Logo } from "@/assets/images/icon"
+import { LoginIcon, Logo, ProductCardSearchIcon, ProductCardShopIcon } from "@/assets/image/icon"
 import Button from "./Button"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -54,7 +54,7 @@ const Header = () => {
 				password: (e.target as HTMLFormElement).password.value,
 				usernameoremail: (e.target as HTMLFormElement).email.value
 			}
-			instance().post("/login", data).then(res => {
+			instance().post("/login", data).then((res) => {
 				setLoginModal(false)
 				setToken(res.data.access_token)
 			})
@@ -106,7 +106,11 @@ const Header = () => {
 						<Link className={`py-[25px] text-[#3D3D3D] text-[16px] leading-[20px] border-b-[2px] ${item.path == path ? "font-bold border-[#46A358]" : "border-transparent font-normal"}`} key={item.id} href={item.path}>{item.title}</Link>
 					))}
 				</div>
-				<Button onClick={() => setLoginModal(true)} title="Login" leftIcon={<LoginIcon />} extraStyle="py-[7px] px-[17px]" type="button" />
+				<div className="flex items-center gap-[30px]">
+					<button className="text-[#3D3D3D] duration-300 hover:text-[#46A358]"><ProductCardSearchIcon/></button>
+					<button className="text-[#3D3D3D] duration-300 hover:text-[#46A358]"><ProductCardShopIcon/></button>
+					<Button onClick={() => setLoginModal(true)} title="Login" leftIcon={<LoginIcon />} extraStyle="py-[7px] px-[17px]" type="button" />
+				</div>
 				<Modal isOpen={loginModal} setIsOpen={setLoginModal} width={500}> 
 					<ul className="mb-[55px] flex items-center justify-center gap-[10px]">
 						<li onClick={() => setIsLogin("login")} className={`${isLogin == "login" && "text-[#46A358]"} text-[#3D3D3D] text-[20px] font-medium leading-[16px] cursor-pointer`}>Login</li>

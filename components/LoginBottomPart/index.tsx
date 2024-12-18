@@ -1,4 +1,4 @@
-import { FacebookIcon, GoogleIcon } from "@/assets/images/icon"
+import { FacebookIcon, GoogleIcon } from "@/assets/image/icon"
 
 const LoginBottomPart = () => {
 	return (

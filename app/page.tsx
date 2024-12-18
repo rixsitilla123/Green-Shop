@@ -1,7 +1,8 @@
 "use client"
-import { DownArrow } from "@/assets/images/icon";
+import { DownArrow } from "@/assets/image/icon";
 import ProductCard from "@/components/ProductCard";
 import Slide from "@/components/Slide";
+import SummerSection from "@/components/SummerSection";
 import { CategoryType, getCategories } from "@/service/getCategories";
 import { ProductType, getProducts } from "@/service/getProducts";
 import { Pagination } from "@nextui-org/pagination";
@@ -25,7 +26,6 @@ export default function Home() {
 	const categories: CategoryType[] = getCategories()
 	const products: ProductType[] = getProducts(categoryName, tags, page, setTotalPage)
 
-
 	const SliderList: SliderType[] = [
 		{
 			id: 1,
@@ -33,7 +33,7 @@ export default function Home() {
 			h1: "Let’s Make a Better",
 			h1Span: "Planet",
 			p: "We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!",
-			img: "/images/HeroImg.jpg"
+			img: "/HeroImg.jpg"
 		}
 	]
 
@@ -43,7 +43,7 @@ export default function Home() {
 				<section className="hero">
 					{SliderList.map((item: SliderType) => <Slide key={item.id} item={item} />)}
 				</section>
-				<section className="flex gap-[50px] justify-between mt-[45px]">
+				<section className="flex gap-[50px] justify-between mt-[45px] mb-[95px]">
 					<div className="w-[25%] h-[100vh] py-[16px] px-[21px] bg-[#FBFBFB]">
 						<h3 className="mb-[15px] text-[#3D3D3D] text-[18px] font-bold leading-[16px]">Categories</h3>
 						<div className="space-y-[10px] pl-[13px]">
@@ -71,10 +71,13 @@ export default function Home() {
 							<Pagination onChange={(e) => setPage(e)} classNames={{
 								wrapper: "gap-[10px] rounded-[4px]", item: "text-[18px] text-[#3D3D3D] font-thin leading-[16px] bg-transparent border border-[#E5E5E5]",
 								cursor: "bg-[#46A358] shadow-lg from-default-500 to-default-800 dark:from-default-300 dark:to-default-100"
-							}}
-								initialPage={page} total={totalPage / 6} />
+							}} initialPage={page} total={totalPage / 6} />
 						</div>
 					</div>
+				</section>
+				<section className="mb-[140px] flex items-center justify-between">
+					<SummerSection title="summer cactus & succulents" img="/SummerImg1.png"/>
+					<SummerSection title="Styling trends & much more" img="/SummerImg2.png"/>
 				</section>
 			</div>
 		</main>

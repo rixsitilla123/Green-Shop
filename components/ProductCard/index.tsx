@@ -1,5 +1,5 @@
 "use client"
-import { ProductCardLikeIcon, ProductCardSearchIcon, ProductCardShopIcon } from "@/assets/images/icon"
+import { ProductCardLikeIcon, ProductCardSearchIcon, ProductCardShopIcon } from "@/assets/image/icon"
 import { Context } from "@/context/AuthContext"
 import { instance } from "@/hooks/instance"
 import { ProductType } from "@/service/getProducts"

@@ -23,6 +23,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en">
+			<head>
+				<link rel="icon" href="/Logo.svg" />
+			</head>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				<ReactQueryProvider>
 					<AuthContext>
