@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import ReactQueryProvider from "@/query/ReactQueryProvider";
 import { AuthContext } from "@/context/AuthContext";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 					<AuthContext>
 						<Header />
 						{children}
+						<Footer />
 					</AuthContext>
 				</ReactQueryProvider>
 			</body>

@@ -178,4 +178,83 @@ function FooterRightIcon() {
 	)
 }
 
-export { Logo, SearchIcon, BasketIcon, LoginIcon, GoogleIcon, FacebookIcon, CloseModalIcon, PasswordHideIcon, PasswordShowIcon, ProductCardShopIcon, ProductCardLikeIcon, ProductCardSearchIcon, DownArrow, FooterRightIcon, }
+function FooterLocationIcon() {
+	return (
+		<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+			<defs />
+			<rect id="Iconly/Curved/Location" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fillOpacity="0" />
+			<path id="Stroke 1" d="M10 6.84C8.85 6.84 7.92 7.77 7.92 8.92C7.92 10.07 8.85 11 10 11C11.15 11 12.09 10.07 12.09 8.92C12.09 7.77 11.15 6.84 10 6.84Z" stroke="#46A358" strokeOpacity="1.000000" strokeWidth="1.500000" strokeLinejoin="round" />
+			<path id="Stroke 3" d="M3.75 8.83C3.75 5.33 6.54 2.5 9.99 2.5C13.45 2.5 16.25 5.33 16.25 8.83C16.25 13.29 12.41 17.5 9.99 17.5C7.58 17.5 3.75 13.29 3.75 8.83Z" stroke="#46A358" strokeOpacity="1.000000" strokeWidth="1.500000" strokeLinejoin="round" />
+		</svg>
+	)
+}
+
+function FooterMessageIcon() {
+	return (
+		<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+			<defs />
+			<rect id="Iconly/Curved/Message" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fillOpacity="0" />
+			<path id="Stroke 1" d="M14.62 7.51C14.62 7.51 11.94 10.72 9.98 10.72C8.03 10.72 5.32 7.51 5.32 7.51" stroke="#46A358" strokeOpacity="1.000000" strokeWidth="1.500000" strokeLinejoin="round" strokeLinecap="round" />
+			<path id="Stroke 3" d="M9.97 2.37C15.93 2.37 17.91 4.27 17.91 9.97C17.91 15.67 15.93 17.57 9.97 17.57C4.02 17.57 2.04 15.67 2.04 9.97C2.04 4.27 4.02 2.37 9.97 2.37Z" stroke="#46A358" strokeOpacity="1.000000" strokeWidth="1.500000" strokeLinejoin="round" />
+		</svg>
+	)
+}
+
+function FooterPhoneIcon() {
+	return (
+		<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+			<defs />
+			<rect id="Iconly/Curved/Calling" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fillOpacity="0" />
+			<path id="Stroke 1" d="M11.96 2.29C15.04 2.63 17.48 5.06 17.82 8.15" stroke="#46A358" strokeOpacity="1.000000" strokeWidth="1.500000" strokeLinejoin="round" strokeLinecap="round" />
+			<path id="Stroke 3" d="M11.96 5.24C13.43 5.53 14.58 6.68 14.87 8.16" stroke="#46A358" strokeOpacity="1.000000" strokeWidth="1.500000" strokeLinejoin="round" strokeLinecap="round" />
+			<path id="Stroke 5" d="M2.09 4.35C2.16 4.21 4.08 1.34 6.14 3.02C11.25 7.23 4.78 6.63 9.07 10.92C13.36 15.21 12.76 8.75 16.97 13.85C18.65 15.91 15.78 17.83 15.64 17.9C14.79 18.51 12.16 19.33 6.41 13.58C0.66 7.83 1.48 5.2 2.09 4.35Z" stroke="#46A358" strokeOpacity="1.000000" strokeWidth="1.500000" strokeLinejoin="round" />
+		</svg>
+	)
+}
+
+function FooterSocialIcon1() {
+	return (
+<svg width="13" height="13" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+	<defs/>
+	<path id="Facebook" d="M2 5.33L0 5.33L0 8L2 8L2 16L5.33 16L5.33 8L7.73 8L8 5.33L5.33 5.33L5.33 4.19C5.33 3.6 5.46 3.33 6.06 3.33L8 3.33L8 0L5.46 0C3.06 0 2 1.06 2 3.06L2 5.33Z" fill="#46A358" fillOpacity="0.600000" fillRule="nonzero"/>
+</svg>
+	)
+}
+
+function FooterSocialIcon2() {
+	return (
+		<svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+	<defs/>
+	<path id="Instagram" d="M8 1.46C10.13 1.46 10.4 1.46 11.26 1.53C13.46 1.6 14.46 2.66 14.53 4.8C14.6 5.66 14.6 5.86 14.6 8C14.6 10.13 14.6 10.39 14.53 11.2C14.46 13.33 13.4 14.39 11.26 14.46C10.4 14.53 10.2 14.53 8 14.53C5.86 14.53 5.6 14.53 4.79 14.46C2.6 14.39 1.6 13.33 1.53 11.2C1.46 10.33 1.46 10.13 1.46 8C1.46 5.86 1.46 5.6 1.53 4.8C1.6 2.66 2.66 1.6 4.79 1.53C5.6 1.46 5.86 1.46 8 1.46ZM8 0C5.79 0 5.53 0 4.73 0.06C1.79 0.19 0.2 1.8 0.06 4.73C0 5.53 0 5.8 0 8C0 10.2 0 10.46 0.06 11.26C0.2 14.2 1.79 15.8 4.73 15.93C5.53 16 5.79 16 8 16C10.2 16 10.46 16 11.26 15.93C14.2 15.8 15.8 14.2 15.93 11.26C16 10.46 16 10.2 16 8C16 5.8 16 5.53 15.93 4.73C15.8 1.8 14.2 0.19 11.26 0.06C10.46 0 10.2 0 8 0ZM8 3.86C5.73 3.86 3.86 5.73 3.86 8C3.86 10.26 5.73 12.13 8 12.13C10.26 12.13 12.13 10.26 12.13 8C12.13 5.73 10.26 3.86 8 3.86ZM8 10.66C6.53 10.66 5.33 9.46 5.33 8C5.33 6.53 6.53 5.33 8 5.33C9.46 5.33 10.66 6.53 10.66 8C10.66 9.46 9.46 10.66 8 10.66ZM12.26 2.8C11.73 2.8 11.33 3.19 11.33 3.73C11.33 4.26 11.73 4.66 12.26 4.66C12.8 4.66 13.2 4.26 13.2 3.73C13.2 3.19 12.8 2.8 12.26 2.8Z" fill="#46A358" fillOpacity="0.600000" fillRule="nonzero"/>
+</svg>
+	)
+}
+
+function FooterSocialIcon3() {
+	return (
+		<svg width="13" height="13" viewBox="0 0 16 13.0037" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+	<defs/>
+	<path id="Twitter" d="M5.03 13C11.06 13 14.37 8 14.37 3.66C14.37 3.52 14.36 3.38 14.36 3.23C15 2.77 15.56 2.19 16 1.53C15.41 1.8 14.77 1.97 14.11 2.05C14.79 1.64 15.31 1 15.55 0.24C14.92 0.61 14.22 0.88 13.47 1.03C12.87 0.39 12.02 0 11.07 0C9.26 0 7.79 1.47 7.79 3.28C7.79 3.54 7.82 3.79 7.87 4.03C5.15 3.89 2.73 2.58 1.11 0.6C0.83 1.08 0.66 1.64 0.66 2.25C0.66 3.38 1.24 4.39 2.12 4.98C1.59 4.96 1.08 4.81 0.64 4.57C0.64 4.58 0.64 4.6 0.64 4.61C0.64 6.2 1.77 7.53 3.27 7.83C3 7.9 2.71 7.94 2.41 7.94C2.19 7.94 1.99 7.92 1.79 7.88C2.21 9.19 3.42 10.14 4.86 10.16C3.73 11.04 2.32 11.57 0.78 11.57C0.51 11.57 0.25 11.55 0 11.52C1.45 12.46 3.17 13 5.03 13Z" fill="#46A358" fillOpacity="0.600000" fillRule="nonzero"/>
+</svg>
+	)
+}
+
+function FooterSocialIcon4() {
+	return (
+<svg width="13" height="13" viewBox="0 0 16 15.3333" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+	<defs/>
+	<path id="Linkedin" d="M3.33 1.66C3.33 2.6 2.6 3.33 1.66 3.33C0.73 3.33 0 2.6 0 1.66C0 0.73 0.73 0 1.66 0C2.6 0 3.33 0.73 3.33 1.66ZM3.33 4.66L0 4.66L0 15.33L3.33 15.33L3.33 4.66ZM8.66 4.66L5.33 4.66L5.33 15.33L8.66 15.33L8.66 9.73C8.66 6.6 12.66 6.33 12.66 9.73L12.66 15.33L16 15.33L16 8.6C16 3.33 10.06 3.53 8.66 6.13L8.66 4.66Z" fill="#46A358" fillOpacity="0.600000" fillRule="nonzero"/>
+</svg>
+	)
+}
+
+function FooterSocialIcon5() {
+	return (
+		<svg width="13" height="13" viewBox="0 0 18.6659 13.98" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+	<defs/>
+	<path id="Vector" d="M18.66 7.01C18.66 2.19 18.27 0.4 15.24 0.17C12.44 -0.06 6.22 -0.06 3.42 0.17C0.38 0.4 0 2.19 0 7.01C0 11.84 0.38 13.62 3.42 13.86C6.22 14.01 12.44 14.01 15.24 13.86C18.27 13.7 18.66 11.84 18.66 7.01ZM4.32 4.35Q4.32 4.36 4.32 4.36Q4.23 5.25 4.23 7.01Q4.23 8.77 4.32 9.66Q6.16 9.74 9.33 9.74Q12.44 9.74 14.34 9.66Q14.42 8.76 14.42 7.01Q14.42 5.25 14.34 4.36Q14.34 4.36 14.34 4.35Q13.55 4.3 12.48 4.27Q11.01 4.23 9.33 4.23Q7.64 4.23 6.17 4.27Q5.09 4.3 4.32 4.35Z" fill="#46A358" fillOpacity="6.000000" fillRule="evenodd"/>
+</svg>
+	)
+}
+
+export { Logo, SearchIcon, BasketIcon, LoginIcon, GoogleIcon, FacebookIcon, CloseModalIcon, PasswordHideIcon, PasswordShowIcon, ProductCardShopIcon, ProductCardLikeIcon, ProductCardSearchIcon, DownArrow, FooterRightIcon, FooterLocationIcon, FooterMessageIcon, FooterPhoneIcon, FooterSocialIcon1, FooterSocialIcon2, FooterSocialIcon3, FooterSocialIcon4, FooterSocialIcon5, }		

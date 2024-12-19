@@ -77,3 +77,7 @@ del {
 .bg-primary{
 	background-color: #46A358 !important;
 }
+
+.blog-card:hover > button{
+	color: #46A358;
+}

@@ -1,5 +1,6 @@
 "use client"
 import { DownArrow } from "@/assets/image/icon";
+import BlogCard from "@/components/BlogCard";
 import ProductCard from "@/components/ProductCard";
 import Slide from "@/components/Slide";
 import SummerSection from "@/components/SummerSection";
@@ -49,7 +50,7 @@ export default function Home() {
 					{SliderList.map((item: SliderType) => <Slide key={item.id} item={item} />)}
 				</section>
 				<section className="flex gap-[50px] justify-between mt-[45px] mb-[95px]">
-					<div className="w-[25%] h-[100vh] py-[16px] px-[21px] bg-[#FBFBFB]">
+					<div className="w-[25%] h-[100%] py-[16px] px-[21px] bg-[#FBFBFB]">
 						<h3 className="mb-[15px] text-[#3D3D3D] text-[18px] font-bold leading-[16px]">Categories</h3>
 						<div className="space-y-[10px] pl-[13px] mb-[36px]">
 							{[{ category_name: "All", category_id: null }, ...categories].map((item: CategoryType) => (
@@ -101,9 +102,21 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<section className="my-[140px] mt-[250px] flex items-center justify-between gap-[40px]">
+				<section className="my-[140px] mt-[150px] flex items-center justify-between gap-[40px]">
 					<SummerSection title="summer cactus & succulents" img="/SummerImg1.png" />
 					<SummerSection title="Styling trends & much more" img="/SummerImg.png" />
+				</section>
+				<section className="mb-[100px]">
+					<div className="mx-auto text-center mb-[35px]">
+						<h3 className="mb-[15px] text-[30px] text-[#3D3D3D] fon-bold leading-[16px]">Our Blog Posts</h3>
+						<p className="text-[#727272] text-[14px] font-normal 24px">We are an online plant shop offering a wide range of cheap and trendy plants. </p>
+					</div>
+					<div className="flex items-center justify-between gap-[42px]">
+						<BlogCard img="/BlogImg3.png" span="September 12  I Read in 6 minutes" title="Cactus & Succulent CareTips" text="Cacti are succulents are easy care plants for any home or patio. " />
+						<BlogCard img="/BlogImg1.png" span="September 13  I Read in 2 minutes" title="Top 10 Succulents for Your Home" text="Best in hanging baskets. Prefers medium to high light." />
+						<BlogCard img="/BlogImg2.png" span="September 15  I Read in 3 minutes" title="Cacti & Succulent Care Tips" text="Cacti and succulents thrive in containers and because most are.." />
+						<BlogCard img="/BlogImg.png" span="September 15  I Read in 2 minutes" title="Best Houseplants Room by Room" text="The benefits of houseplants are endless. In addition to.." />
+					</div>
 				</section>
 			</div>
 		</main>
