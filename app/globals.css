@@ -68,7 +68,7 @@ del {
 }
 
 .summer-section-card{
-	background-image: url("../assets/images/SummerBg.png");
+	background-image: url("../public/SummerBg.png");
 	background-size: auto 50%;
 	background-position: left bottom;
 	background-repeat: no-repeat;

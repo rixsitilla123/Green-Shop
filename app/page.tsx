@@ -33,7 +33,7 @@ export default function Home() {
 			h1: "Let’s Make a Better",
 			h1Span: "Planet",
 			p: "We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!",
-			img: "/HeroImg.jpg"
+			img: "/HeroImg.png"
 		}
 	]
 
@@ -75,7 +75,7 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<section className="mb-[140px] flex items-center justify-between">
+				<section className="mb-[140px] flex items-center justify-between gap-[40px]">
 					<SummerSection title="summer cactus & succulents" img="/SummerImg1.png"/>
 					<SummerSection title="Styling trends & much more" img="/SummerImg2.png"/>
 				</section>
