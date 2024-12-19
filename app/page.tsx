@@ -2,14 +2,14 @@
 import { DownArrow } from "@/assets/image/icon";
 import BlogCard from "@/components/BlogCard";
 import ProductCard from "@/components/ProductCard";
-import Slide from "@/components/Slide";
+import Carusel from "@/components/Slide/Carusel";
 import SummerSection from "@/components/SummerSection";
 import debounce from "@/hooks/debounce";
 import { CategoryType, getCategories } from "@/service/getCategories";
 import { ProductType, getProducts } from "@/service/getProducts";
 import { Pagination } from "@nextui-org/pagination";
 import { Slider } from "@nextui-org/slider";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 interface SliderType {
 	id: number,
@@ -47,7 +47,7 @@ export default function Home() {
 		<main>
 			<div className="container1">
 				<section className="hero">
-					{SliderList.map((item: SliderType) => <Slide key={item.id} item={item} />)}
+					{SliderList.map((item: SliderType) => <Carusel key={item.id} item={item} />)}
 				</section>
 				<section className="flex gap-[50px] justify-between mt-[45px] mb-[95px]">
 					<div className="w-[25%] h-[100%] py-[16px] px-[21px] bg-[#FBFBFB]">

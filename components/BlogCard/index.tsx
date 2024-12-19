@@ -12,7 +12,7 @@ interface BlogCardType {
 const BlogCard:React.FC<BlogCardType> = ({img, span, title, text}) => {
 	return (
 		<div className="w-[268px] blog-card bg-[#FBFBFB]">
-			<Image style={{width: "auto", height: "auto"}} src={img} alt={"blog img"} width={268} height={195}/>
+			<Image style={{width: "auto", height: "auto"}} src={img} alt={"blog img"} width={268} height={195} priority/>
 			<div className="px-[13px] py-[10px] text-left">
 				<span className="mb-[5px] text-[#46A358] text-[14px] font-medium leading-[16px]">{span}</span>
 				<h4 className="mb-[5px] text-[20px] text-[#3D3D3D] font-bold leading-[26px]">{title}</h4>

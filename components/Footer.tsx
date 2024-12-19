@@ -110,7 +110,7 @@ const Footer = () => {
 							<button className="p-[8px] border-[1px] border-[rgba(70,163,88,0.2)] rounded-[4px] flex items-center justify-center"><FooterSocialIcon5/></button>
 						</div>
 						<strong className="text-[#3D3D3D] text-[18px] font-bold leading-[16px]">We accept</strong>
-						<Image className='mt-[13px]' style={{width: "auto", height: "auto"}} src="" alt="footer img" width={224} height={26}/>
+						<Image className='mt-[13px]' style={{width: "auto", height: "auto"}} src="/FooterSocialMedia.png" alt="footer img" width={224} height={26}/>
 					</div>
 				</div>
 				<hr />
