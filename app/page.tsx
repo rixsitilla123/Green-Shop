@@ -46,10 +46,14 @@ export default function Home() {
 				<section className="flex gap-[50px] justify-between mt-[45px] mb-[95px]">
 					<div className="w-[25%] h-[100vh] py-[16px] px-[21px] bg-[#FBFBFB]">
 						<h3 className="mb-[15px] text-[#3D3D3D] text-[18px] font-bold leading-[16px]">Categories</h3>
-						<div className="space-y-[10px] pl-[13px]">
+						<div className="space-y-[10px] pl-[13px] mb-[36px]">
 							{[{ category_name: "All", category_id: null }, ...categories].map((item: CategoryType) => (
 								<div key={item.category_id} className={`${categoryName == item.category_name ? "text-[#46A358]" : "text-[#3D3D3D]"} cursor-pointer`} onClick={() => setCategoryName(item.category_name)}><span className={`text-[15px] font-normal leading-[40px] cursor-pointer`}>{item.category_name}</span></div>
 							))}
+						</div>
+						<div className="mb-[46px]">
+							<h3 className="mb-[15px] text-[#3D3D3D] text-[18px] font-bold leading-[16px]">Categories</h3>
+							{/* slider */}
 						</div>
 					</div>
 					<div className="w-[75%]">
@@ -76,8 +80,8 @@ export default function Home() {
 					</div>
 				</section>
 				<section className="mb-[140px] flex items-center justify-between gap-[40px]">
-					<SummerSection title="summer cactus & succulents" img="/SummerImg1.png"/>
-					<SummerSection title="Styling trends & much more" img="/SummerImg2.png"/>
+					<SummerSection title="summer cactus & succulents" img="/SummerImg1.png" />
+					<SummerSection title="Styling trends & much more" img="/SummerImg.png" />
 				</section>
 			</div>
 		</main>

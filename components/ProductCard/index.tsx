@@ -11,29 +11,52 @@ const ProductCard: React.FC<{ item: ProductType }> = ({ item }) => {
 	const queryClient = useQueryClient()
 	const { token } = useContext(Context)
 
+	// Like part start
 	const likeMutation = useMutation({
-		mutationFn: (id: string) => instance().post(`/like/${id}`, {}, { 
-			headers: { "Authorization":`Bearer ${token}`} 
+		mutationFn: (id: string) => instance().post(`/like/${id}`, {}, {
+			headers: { "Authorization": `Bearer ${token}` }
 		}),
 		onSuccess: () => {
-			queryClient.invalidateQueries({queryKey:["products"]})
+			queryClient.invalidateQueries({ queryKey: ["products"] })
 		}
 	})
+	function handleProductLikeBtnClick(id: string) {
+		if (!token) {
+			alert("Like ni bosish uchun Login dan otish kerak!")
+		} else {
+			likeMutation.mutate(id)
+		}
+	}
+	// Like part end
+
+	// Basket part start
+	const basketMutation = useMutation({
+		mutationFn: (data: { productId: string }) => instance().post(`/basket`, data, {
+			headers: { "Authorization": `Bearer ${token}` }
+		}),
+		onSuccess: () => {
+			queryClient.invalidateQueries({ queryKey: ["products"] })
+			queryClient.invalidateQueries({ queryKey: ["basket_list"] })
+		}
+	})
+	function handleProductBasketBtnClick(productId: string) {
+		if (!token) {
+			alert("Basket ni bosish uchun Login dan otish kerak!")
+		} else {
+			const data = { productId }
+			basketMutation.mutate(data)
+		}
+	}
+	// Basket part end
 
 	return (
 		<div className="!w-[250px] border-t-[1px] border-transparent duration-500 hover:border-[#46A358] mb-[40px]">
 			<div className="mb-[12px] card-img-d">
 				<Image className="card-img" style={{ width: "auto", height: "auto" }} priority src={item.image_url ? item.image_url[0] : "/images/flower.jpg"} alt={"Product img"} width={250} height={250} />
 				<div className="flex items-center justify-center gap-[10px] h-[36px] card-btn-d">
-					<button className={`duration-300 p-[8px] rounded-[5px] flex items-center justify-center bg-white`}>
-						<ProductCardShopIcon />
-					</button>
-					<button onClick={() => token ? likeMutation.mutate(item.product_id) : {}} className={`text-[#3D3D3D] duration-300 p-[8px] rounded-[5px] flex items-center justify-center border-[1px] border-transparent hover:border-[#46A358] bg-white ${item.liked && "text-red-500"}`}>
-						<ProductCardLikeIcon /> 
-					</button>
-					<button className="text-[#3D3D3D] duration-300 hover:text-[#46A358] p-[8px] rounded-[5px] flex items-center justify-center bg-white ">
-						<ProductCardSearchIcon />
-					</button>
+					<button onClick={() => handleProductBasketBtnClick(item.product_id)} className={`text-[#3D3D3D] duration-300 p-[8px] rounded-[5px] flex items-center justify-center border-[1px] border-transparent hover:border-[#46A358] bg-white ${item.basket && "text-[#46A358]"}`}><ProductCardShopIcon /></button>
+					<button onClick={() => handleProductLikeBtnClick(item.product_id)} className={`text-[#3D3D3D] duration-300 p-[8px] rounded-[5px] flex items-center justify-center border-[1px] border-transparent hover:border-[#46A358] bg-white ${item.liked && "text-red-500"}`}><ProductCardLikeIcon /></button>
+					<button className="text-[#3D3D3D] duration-300 hover:text-[#46A358] p-[8px] rounded-[5px] flex items-center justify-center border-[1px] border-transparent hover:border-[#46A358] bg-white"><ProductCardSearchIcon /></button>
 				</div>
 				<div className="card-content-d">
 					<h2 className="mb-[10px] text-[16px] text-[#3D3D3D] font-normal leading-[16px]">{item.product_name}</h2>
