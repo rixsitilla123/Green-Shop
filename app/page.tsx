@@ -3,9 +3,11 @@ import { DownArrow } from "@/assets/image/icon";
 import ProductCard from "@/components/ProductCard";
 import Slide from "@/components/Slide";
 import SummerSection from "@/components/SummerSection";
+import debounce from "@/hooks/debounce";
 import { CategoryType, getCategories } from "@/service/getCategories";
 import { ProductType, getProducts } from "@/service/getProducts";
 import { Pagination } from "@nextui-org/pagination";
+import { Slider } from "@nextui-org/slider";
 import React, { useState, useEffect } from 'react';
 
 interface SliderType {
@@ -22,9 +24,12 @@ export default function Home() {
 	const [tags, setTags] = useState<string | null>(null)
 	const [page, setPage] = useState<number>(1)
 	const [totalPage, setTotalPage] = useState<number>(10)
+	const [price, setPrice] = useState<number[] | number>([39, 1230])
+	const [size, setSize] = useState<string | null>(null)
+	const fullPrice = debounce(price, 1000)
 
 	const categories: CategoryType[] = getCategories()
-	const products: ProductType[] = getProducts(categoryName, tags, page, setTotalPage)
+	const products: ProductType[] = getProducts(categoryName, tags, page, setTotalPage, fullPrice, size)
 
 	const SliderList: SliderType[] = [
 		{
@@ -52,8 +57,25 @@ export default function Home() {
 							))}
 						</div>
 						<div className="mb-[46px]">
-							<h3 className="mb-[15px] text-[#3D3D3D] text-[18px] font-bold leading-[16px]">Categories</h3>
-							{/* slider */}
+							<h3 className="mb-[20px] text-[#3D3D3D] text-[18px] font-bold leading-[16px] bg-[#FBFBFB]">Price Range</h3>
+							<Slider className="max-w-md"
+								onChange={(e) => setPrice(e)}
+								defaultValue={[39, 1230]}
+								formatOptions={{ style: "currency", currency: "USD" }}
+								label="Price:"
+								maxValue={1230}
+								minValue={39}
+								step={2}
+								size="sm"
+							/>
+						</div>
+						<div className="mb-[20px] bg-[#FBFBFB]">
+							<h3 className="mb-[20px] text-[#3D3D3D] text-[18px] font-bold leading-[16px]">Size</h3>
+							<div className="pl-[15px]">
+								<p onClick={() => setSize("small")} className="text-[#3D3D3D] text-[15px] font-normal leading-[40px]">Small</p>
+								<p onClick={() => setSize("medium")} className="text-[#3D3D3D] text-[15px] font-normal leading-[40px]">Medium</p>
+								<p onClick={() => setSize("large")} className="text-[#3D3D3D] text-[15px] font-normal leading-[40px]">Large</p>
+							</div>
 						</div>
 					</div>
 					<div className="w-[75%]">
@@ -79,7 +101,7 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<section className="mb-[140px] flex items-center justify-between gap-[40px]">
+				<section className="my-[140px] mt-[250px] flex items-center justify-between gap-[40px]">
 					<SummerSection title="summer cactus & succulents" img="/SummerImg1.png" />
 					<SummerSection title="Styling trends & much more" img="/SummerImg.png" />
 				</section>

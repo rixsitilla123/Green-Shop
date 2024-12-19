@@ -73,3 +73,7 @@ del {
 	background-position: left bottom;
 	background-repeat: no-repeat;
 }
+
+.bg-primary{
+	background-color: #46A358 !important;
+}
